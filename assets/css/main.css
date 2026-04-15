@@ -1,0 +1,194 @@
+.vignette-overlay {
+    background: radial-gradient(circle at 45% 40%, transparent 40%, rgba(0, 0, 0, 0.92) 90%);
+    width: 100%;
+    height: 100%;
+}
+
+html,
+body,
+body * {
+    cursor: var(--swatter-cursor, auto);
+}
+
+/* .grain-texture {
+    background-image: url(ttps://lh3.googleusercontent.com/aida-public/AB6AXuCzRUUGDWFaVVE2R5-iauPRpp8eT2Bd_gYRVXAuqKQZyQb8O7q4EkHlXFZ8VDWVmblNufpw_Rk_PjU_ur0wKAM1jsYyNn2OJozGWNPSQ1dQusqdjEMZx-yrUAJzOosd5TDvvkWiWSX_dCPlpXPPXZmt06cNO4sv8Dy8ZlToobnrNM1goQrDpMN2j3LgYP_1BAkN04Z6_Hv2iDnGQIQJzUCpGe150b4YFVkmCsDR6bvYZ0fm66uC3qKWX-ophIAN_C31jhjh6SW5vjY);
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+} */
+
+.decaying-title {
+    color: #ff5e5e;
+    text-shadow: 0 0 20px rgba(209, 75, 59, 0.6), 0 0 40px rgba(209, 75, 59, 0.2), 0 10px 30px rgba(0, 0, 0, 0.9);
+    background: linear-gradient(180deg, #ff9488 0%, #5e241e 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: url(#decay-filter) brightness(1.4) contrast(1.2);
+    letter-spacing: -0.05em;
+}
+
+.blood-splatter {
+    background-image: radial-gradient(circle, rgba(70, 0, 0, 0.5) 0%, transparent 70%);
+    filter: blur(12px);
+    mix-blend-mode: multiply;
+}
+
+.rusted-metal {
+    background-color: #550e0e;
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByiMEDsXz_xGpoTlUprlrGDm5AHu5rw55bHDvOTq16aHNkL4V_6Bb6FzTFV3ZVh4GzIfIyse8J2Y-QWUwuuBWN8RYou_eE4BnesEtMrI7_WmomdWQd5xrQ-6WsqAJV-6pbssofYxb7Ai5pZ1ZkJz0eZEcQ1i4hXC2ulbBFfOX5l08fWVPwW9mRxsRP7Z08pS8Z38Rnqy0yKDquBX96W76maqGBtMLCt6AiYl3Q1yueEi5xOKhfWJFybG_1B2zupVjjjGVc7VQucGg");
+    background-blend-mode: luminosity;
+    background-size: cover;
+    box-shadow: 0 15px 30px rgba(5, 5, 5, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+    border: 1px solid #000000;
+}
+
+.grimy-tape {
+    background-color: #3d3b30;
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCX3UxXo9Q5loRowzeLtvmVOtNwXRy0Vuah-ilbAHN9SLXNTypPg4dJYUjWVzzQPRFv01XyjFtpR58GOL4-kiwaMOJCOeaTPsXrV5SRjjb1XWjp8ohD8gSLw6agq_zVgHXafu0qOlzg3ZkfmULlQllH7Yu3oBrYNH3YrbJKZvgOrrSqLRclmYGfMv9UA05iC3ffK9PoPMJ9x0wW0CNwQFK2tKkvy2U0o9nQvnN_xidqPBtKSTbJKqMeeA3owCz2zVLvc5lCt5Hi7yA");
+    opacity: 0.95;
+    transform: rotate(-0.5deg);
+    background-size: cover;
+    border-radius: 1px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.oil-slick {
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.95) 0%, transparent 80%);
+    filter: blur(25px);
+    mix-blend-mode: darken;
+}
+
+.overhead-light {
+    background: radial-gradient(circle at 50% 0%, rgba(255, 230, 200, 0.15) 0%, transparent 60%);
+    mix-blend-mode: screen;
+}
+
+.old-paper-menu {
+    background-color: #cfbda2;
+    background-image:
+        radial-gradient(circle at center, transparent 20%, rgba(70, 45, 20, 0.7) 100%),
+        url("https://lh3.googleusercontent.com/aida-public/AB6AXuCX3UxXo9Q5loRowzeLtvmVOtNwXRy0Vuah-ilbAHN9SLXNTypPg4dJYUjWVzzQPRFv01XyjFtpR58GOL4-kiwaMOJCOeaTPsXrV5SRjjb1XWjp8ohD8gSLw6agq_zVgHXafu0qOlzg3ZkfmULlQllH7Yu3oBrYNH3YrbJKZvgOrrSqLRclmYGfMv9UA05iC3ffK9PoPMJ9x0wW0CNwQFK2tKkvy2U0o9nQvnN_xidqPBtKSTbJKqMeeA3owCz2zVLvc5lCt5Hi7yA");
+    background-blend-mode: multiply;
+    background-size: cover;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 1), inset 0 0 80px rgba(60, 35, 10, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    border: 1px solid #3d2916;
+    overflow: visible;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    color: #2b1f14;
+}
+
+.old-btn-texture {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByiMEDsXz_xGpoTlUprlrGDm5AHu5rw55bHDvOTq16aHNkL4V_6Bb6FzTFV3ZVh4GzIfIyse8J2Y-QWUwuuBWN8RYou_eE4BnesEtMrI7_WmomdWQd5xrQ-6WsqAJV-6pbssofYxb7Ai5pZ1ZkJz0eZEcQ1i4hXC2ulbBFfOX5l08fWVPwW9mRxsRP7Z08pS8Z38Rnqy0yKDquBX96W76maqGBtMLCt6AiYl3Q1yueEi5xOKhfWJFybG_1B2zupVjjjGVc7VQucGg");
+    background-blend-mode: overlay;
+}
+
+.old-btn-texture-dark {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCX3UxXo9Q5loRowzeLtvmVOtNwXRy0Vuah-ilbAHN9SLXNTypPg4dJYUjWVzzQPRFv01XyjFtpR58GOL4-kiwaMOJCOeaTPsXrV5SRjjb1XWjp8ohD8gSLw6agq_zVgHXafu0qOlzg3ZkfmULlQllH7Yu3oBrYNH3YrbJKZvgOrrSqLRclmYGfMv9UA05iC3ffK9PoPMJ9x0wW0CNwQFK2tKkvy2U0o9nQvnN_xidqPBtKSTbJKqMeeA3owCz2zVLvc5lCt5Hi7yA");
+    background-blend-mode: color-burn;
+}
+
+.diff-btn {
+    background-color: #6d5840;
+    background-image: radial-gradient(ellipse at center, transparent 0%, rgba(30, 20, 10, 0.7) 100%);
+    border: 2px solid #2b1f14;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8), 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.diff-btn:hover {
+    background-color: #7d654b;
+}
+
+.diff-btn.selected {
+    border-color: #d1b87b;
+    box-shadow: 0 0 25px rgba(209, 184, 123, 0.3), inset 0 2px 15px rgba(0, 0, 0, 0.8);
+    background-color: #7d664a;
+    transform: scale(1.02);
+    z-index: 10;
+}
+
+.diff-btn.selected::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(209, 184, 123, 0.1), transparent);
+    pointer-events: none;
+}
+
+.game-hud-card {
+    background: #120807;
+    border: 1px solid rgba(255, 233, 201, 0.35);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+.insect-target {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 120ms ease, filter 120ms ease, opacity 160ms ease;
+    animation: twitch 0.55s ease-in-out infinite alternate;
+}
+
+.insect-target:hover {
+    filter: brightness(1.15);
+    transform: scale(1.08);
+}
+
+.insect-target:active {
+    transform: scale(0.92);
+}
+
+.insect-target img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.7));
+}
+
+/* Victory styles are intentionally shared with difficulty menu components. */
+
+.historial-table-wrap {
+    background: rgba(26, 17, 9, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.historial-table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.historial-table th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #3f2d1f;
+    text-align: center;
+    padding: 0.25rem 0.4rem;
+}
+
+.historial-table td {
+    text-align: center;
+    background: rgba(70, 50, 33, 0.26);
+    color: #2b1f14;
+    font-weight: 700;
+    padding: 0.7rem 0.5rem;
+}
+
+.historial-table tbody tr td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.historial-table tbody tr td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}

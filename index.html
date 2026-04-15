@@ -1,0 +1,462 @@
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#000000",
+                        "surface-container-highest": "#1a0f0d",
+                        "on-surface-variant": "#8a6d68",
+                        "primary": "#d14b3b",
+                        "error-container": "#4a0404",
+                        "secondary-container": "#1e3a1a",
+                        "on-primary": "#2d0a06",
+                        "on-primary-fixed": "#2d0a06",
+                        "surface-tint": "#d14b3b",
+                        "primary-container": "#5a2d27",
+                        "inverse-surface": "#fff8f6",
+                        "surface-container-high": "#150a08",
+                        "on-tertiary": "#2a0001",
+                        "on-secondary-fixed": "#0a2d0d",
+                        "secondary-dim": "#4e8c4d",
+                        "on-tertiary-fixed": "#2a0001",
+                        "tertiary": "#8b0000",
+                        "tertiary-fixed": "#ff9288",
+                        "secondary": "#5da65c",
+                        "on-surface": "#a3807a",
+                        "on-secondary-fixed-variant": "#1a3a1e",
+                        "tertiary-fixed-dim": "#ff7b70",
+                        "tertiary-container": "#5a0001",
+                        "surface-bright": "#22110e",
+                        "secondary-fixed": "#5da65c",
+                        "on-primary-container": "#ffdad4",
+                        "primary-fixed": "#ffdad4",
+                        "on-tertiary-fixed-variant": "#600004",
+                        "on-primary-fixed-variant": "#8a332a",
+                        "inverse-primary": "#9c2a1e",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "outline-variant": "#3a2522",
+                        "surface-container-lowest": "#050201",
+                        "outline": "#6d4e4a",
+                        "inverse-on-surface": "#321d1b",
+                        "on-secondary": "#0a2d0d",
+                        "surface-container-low": "#0d0605",
+                        "surface": "#050201",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#ffdad9",
+                        "error": "#ffb4ab",
+                        "tertiary-dim": "#8b0000",
+                        "background": "#050201",
+                        "primary-dim": "#ffb4aa",
+                        "surface-container": "#120807",
+                        "on-secondary-container": "#bdf1bb",
+                        "surface-variant": "#1a0f0d",
+                        "error-dim": "#ffb4ab",
+                        "secondary-fixed-dim": "#4e8c4d",
+                        "on-background": "#a3807a",
+                        "surface-dim": "#050201"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0.125rem",
+                        "xl": "0.25rem",
+                        "full": "0.5rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    "animation": {
+                        "flicker": "flicker 4s linear infinite",
+                        "flicker-light": "flicker-light 8s infinite",
+                        "twitch": "twitch 0.5s ease-in-out infinite alternate",
+                        "float": "float 6s ease-in-out infinite"
+                    },
+                    "keyframes": {
+                        "flicker": {
+                            "0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%": { opacity: "1", filter: "brightness(100%)" },
+                            "20%, 21.999%, 63%, 63.999%, 65%, 69.999%": { opacity: "0.85", filter: "brightness(90%)" }
+                        },
+                        "flicker-light": {
+                            "0%, 100%": { opacity: "0.4" },
+                            "5%, 7%": { opacity: "0.2" },
+                            "6%": { opacity: "0.5" },
+                            "30%, 32%": { opacity: "0.35" },
+                            "31%": { opacity: "0.1" },
+                            "70%, 72%": { opacity: "0.45" },
+                            "71%": { opacity: "0.2" }
+                        },
+                        "twitch": {
+                            "0%": { transform: "translate(0, 0) rotate(0deg)" },
+                            "10%": { transform: "translate(-1px, -1px) rotate(-0.5deg)" },
+                            "20%": { transform: "translate(1px, 0px) rotate(0.5deg)" },
+                            "100%": { transform: "translate(0, 0) rotate(0deg)" }
+                        },
+                        "float": {
+                            "0%, 100%": { transform: "translateY(0)" },
+                            "50%": { transform: "translateY(-10px)" }
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+
+<body
+    class="bg-black font-body text-on-surface/40 overflow-hidden min-h-screen selection:bg-tertiary selection:text-white">
+    <svg style="display:none">
+        <filter id="decay-filter">
+            <feturbulence basefrequency="0.15" numoctaves="5" stitchtiles="stitch" type="fractalNoise"></feturbulence>
+            <fedisplacementmap in="SourceGraphic" scale="8"></fedisplacementmap>
+            <fegaussianblur stddeviation="0.5"></fegaussianblur>
+        </filter>
+    </svg>
+    <!-- Global Flickering Overlay -->
+    <div class="fixed inset-0 z-[100] pointer-events-none animate-flicker-light bg-primary/5"></div>
+    <!-- The Macro Workbench: Main Menu Canvas -->
+    <main
+        class="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center grayscale-[0.4] brightness-[0.4]"
+        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqfHLviWJbIpA7iGHPnT6mvQRVx5dM4va83Jh2Y8nVFleFhBgPoXPnUGJvStP3K8jcJhuBTfK5JFV1iC0bpNmyOf-KfIeD2GxniV6TX4Vgo1CsES__rhCNn8_QMsSwV8viZdjNqY0PpbKaTeS1BsMurSM9tZ1Rl6GP_q0vqjdYPeNDCOC6PHQ8lWR0XKHF3wYSEub8Nic8UjdMLwtrNKEfLT5-1J7DsThmO5FkB583nihRVfxZ5RRLJquj61deGLBEy708juWHZFk');">
+        <!-- Atmospheric Overlays -->
+        <div class="absolute inset-0 vignette-overlay pointer-events-none z-0"></div>
+        <div class="absolute inset-0 overhead-light pointer-events-none z-0"></div>
+        <div class="absolute inset-0 grain-texture pointer-events-none z-0"></div>
+        <!-- Organic Stains -->
+        <div class="absolute top-1/3 left-1/4 w-96 h-96 oil-slick opacity-100"></div>
+        <div class="absolute bottom-20 right-1/4 w-80 h-80 blood-splatter opacity-80"></div>
+        <!-- Crawling Specimens (Integrated into shadows) -->
+        <div
+            class="absolute top-[12%] left-[18%] w-32 h-32 opacity-20 rotate-12 filter blur-[2px] brightness-[0.1] contrast-150 animate-twitch">
+            <img alt="centipede" class="w-full h-auto"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVBXvl-QCGMGsR63m45E6cINVB-mmpi_HYPco-7vchCkrJaEauVjB_Cvrs6nMdEih7QDDnIvvpmlWNniwOVvv7g2-XeI1vep_8vRaiErYaiMigIqfrlTZ7dmAGEuvvob12vGfr3ngtxIyu5QdoO7gEGDaNlpJ5uf1q3at_hJoJ6biBxY4njI5hHjQmzr4nWAiIzI0j9BbgR-3Rnm7lKUAjY-uht52ExeK3ALNiTU-s4JnI96WQK_ltmhQIxGgmRgzF4EbhcpXsJdc" />
+        </div>
+        <!-- Content Container -->
+        <div id="menu-principal" class="relative z-10 flex flex-col items-center gap-12 w-full max-w-lg px-6 animate-flicker">
+            <!-- Logo / Title Section -->
+            <header class="text-center relative">
+                <h1
+                    class="font-headline font-black italic uppercase text-8xl md:text-9xl decaying-title leading-none relative">
+                    INFESTACIÓN
+                    <!-- Slime overlay -->
+                    <div class="absolute inset-0 slimy-texture pointer-events-none"></div>
+                </h1>
+                <p class="mt-4 font-label text-[10px] uppercase tracking-[0.6em] text-primary/20 font-bold">
+                    Biological Containment Breach
+                </p>
+            </header>
+            <!-- Main Menu Card -->
+            <section class="w-full flex flex-col gap-6 relative">
+                <!-- Action Buttons -->
+                <nav class="flex flex-col gap-5 relative z-20">
+                    <!-- Start Experiment -->
+                    <button id="btn-comenzar"
+                        class="group relative flex items-center justify-center py-6 px-6 rusted-metal text-white hover:text-white transition-all duration-500">
+                        <span
+                            class="font-headline font-black text-2xl uppercase tracking-tighter relative z-10 transition-opacity !opacity-100 [text-shadow:_0_0_15px_rgba(209,75,59,0.8),_0_0_5px_rgba(255,255,255,0.2)]">COMENZAR
+                            EXPERIMENTO</span>
+                        <span
+                            class="material-symbols-outlined absolute right-6 text-2xl text-white/40 group-hover:text-primary transition-all">pest_control_rodent</span>
+                    </button>
+                    <!-- Settings -->
+                    <button id="btn-configuracion"
+                        class="group relative flex items-center justify-between py-4 px-10 grimy-tape hover:text-black/80 transition-all text-black/80 hover:text-black">
+                        <div class="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBVnWYvn0uyDcI5wAWEw57cduL6OCujRQ_YM5J1z_DDSP4VduKfOue0ZxEA70t3p-Q0mjBU0QLaX4j5xSXNxROgCPD54NT7Vnfv30W2qW5P0N26u2DwzuAFY6lFrLLh1-tW4j_sv7rvV-IRNrru2SBsTt29EtoDqpEjetkjrNDlkKLe8OL7T8E9YtZUAsB0Y_iqcwJ_Pcy8hkCDflC_3wycPt66qVQgH5qYW9-urkEMP1qX5H4ahpkG2tdq0r8hBLHCp4HLoltHGg');">
+                        </div>
+                        <span
+                            class="font-headline font-bold text-lg uppercase tracking-[0.2em] relative z-10 italic">CONFIGURACIÓN</span>
+                        <span class="material-symbols-outlined text-black/20 relative z-10 text-xl">settings</span>
+                    </button>
+                    <!-- Killer History -->
+                    <button id="btn-historial"
+                        class="group relative flex items-center justify-between py-4 px-10 grimy-tape hover:text-black/80 transition-all text-black/80 hover:text-black">
+                        <div class="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBVnWYvn0uyDcI5wAWEw57cduL6OCujRQ_YM5J1z_DDSP4VduKfOue0ZxEA70t3p-Q0mjBU0QLaX4j5xSXNxROgCPD54NT7Vnfv30W2qW5P0N26u2DwzuAFY6lFrLLh1-tW4j_sv7rvV-IRNrru2SBsTt29EtoDqpEjetkjrNDlkKLe8OL7T8E9YtZUAsB0Y_iqcwJ_Pcy8hkCDflC_3wycPt66qVQgH5qYW9-urkEMP1qX5H4ahpkG2tdq0r8hBLHCp4HLoltHGg');">
+                        </div>
+                        <span
+                            class="font-headline font-bold text-lg uppercase tracking-[0.16em] relative z-10 italic">HISTORIAL ASESINO</span>
+                        <span class="material-symbols-outlined text-black/20 relative z-10 text-xl">history</span>
+                    </button>
+                    <!-- Exit -->
+                    <button id="btn-salir" type="button"
+                        class="group relative flex items-center justify-between py-4 px-10 grimy-tape bg-red-950/20 hover:text-tertiary-dim/60 transition-all text-tertiary-dim/70 hover:text-tertiary-dim [text-shadow:_0_0_8px_rgba(139,0,0,0.4)]">
+                        <span
+                            class="font-headline font-bold text-lg uppercase tracking-[0.2em] relative z-10 italic">SALIR</span>
+                        <span class="material-symbols-outlined text-black/20 relative z-10 text-xl">close</span>
+                    </button>
+                </nav>
+                <!-- Footer Stats -->
+                <footer
+                    class="mt-8 pt-6 border-t border-white/5 flex justify-between items-center text-[8px] font-label uppercase tracking-widest text-outline/20">
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="w-1 h-1 rounded-full bg-secondary-dim/40 shadow-[0_0_8px_rgba(78,140,77,0.3)] animate-pulse"></span>
+                        BIO-HAZARD: CRITICAL
+                    </div>
+                    <div class="opacity-10 italic">SYSTEM.NULL_PTR.08</div>
+                </footer>
+            </section>
+            <!-- Subtle Specimen Icons -->
+            <div
+                class="flex gap-10 items-center justify-center opacity-5 hover:opacity-10 transition-opacity duration-1000 grayscale">
+                <div class="flex flex-col items-center">
+                    <span class="material-symbols-outlined text-primary/40 text-2xl"
+                        data-weight="fill">bug_report</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="material-symbols-outlined text-primary/40 text-2xl" data-weight="fill">biotech</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="material-symbols-outlined text-primary/40 text-2xl"
+                        data-weight="fill">pest_control</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Dificultad -->
+        <div id="menu-dificultad" class="relative z-10 flex flex-col items-center gap-8 w-full max-w-[650px] px-12 py-16 animate-flicker hidden old-paper-menu">
+            <div class="absolute inset-0 blood-splatter opacity-30 pointer-events-none"></div>
+            <!-- Extra dirty splatters to simulate age -->
+            <div class="absolute top-10 right-10 w-24 h-24 bg-red-900/40 rounded-full mix-blend-multiply blur-xl pointer-events-none"></div>
+            <div class="absolute bottom-20 left-10 w-32 h-32 bg-black/40 rounded-full mix-blend-multiply blur-2xl pointer-events-none"></div>
+            
+            <h2 class="font-headline font-black text-6xl md:text-7xl tracking-wide relative z-10" style="color: #c9ca1f; -webkit-text-stroke: 2px #2b1f14; text-shadow: 3px 6px 8px rgba(0,0,0,0.8);">
+                Dificultad
+            </h2>
+            
+            <p class="font-mono text-center text-[#1a120b] font-bold mb-4 text-base md:text-lg leading-relaxed px-4 relative z-10 mix-blend-color-burn">
+                Calibra tus herramientas y ajusta el ritmo para tu próxima recolección.
+            </p>
+            
+            <div class="w-full flex flex-col gap-5 relative z-10">
+                <!-- Fácil -->
+                <button class="diff-btn group flex items-center p-5 rounded-md" data-dificultad="facil">
+                    <div class="w-20 flex justify-center text-[#d2c299]">
+                        <span class="material-symbols-outlined text-6xl drop-shadow-[2px_3px_2px_rgba(0,0,0,0.7)]">bug_report</span>
+                    </div>
+                    <div class="flex-1 text-left ml-4">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-headline font-black text-3xl text-[#dfdfdf] drop-shadow-[2px_3px_2px_rgba(0,0,0,0.8)]" style="-webkit-text-stroke: 1px #111;">Fácil</span>
+                            <span class="bg-[#3a1515] text-[#d67b7b] text-xs px-2.5 py-1 rounded shadow-inner font-black tracking-widest border border-[#1a0a0a]">BAJO RIESGO</span>
+                        </div>
+                        <p class="font-mono text-sm text-[#cfcfcf] font-medium leading-tight text-shadow-sm">Insectos lentos y mucho tiempo.</p>
+                    </div>
+                </button>
+
+                <!-- Normal -->
+                <button class="diff-btn selected group flex items-center p-5 rounded-md" data-dificultad="normal">
+                    <div class="w-20 flex justify-center text-[#d2c299]">
+                        <span class="material-symbols-outlined text-6xl drop-shadow-[2px_3px_2px_rgba(0,0,0,0.7)]">balance</span>
+                    </div>
+                    <div class="flex-1 text-left ml-4">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-headline font-black text-3xl text-[#c9ca1f] drop-shadow-[2px_3px_2px_rgba(0,0,0,0.8)]" style="-webkit-text-stroke: 1px #111;">Normal</span>
+                            <span class="bg-[#3a1515] text-[#d67b7b] text-xs px-2.5 py-1 rounded shadow-inner font-black tracking-widest border border-[#1a0a0a]">RECOMENDADO</span>
+                        </div>
+                        <p class="font-mono text-sm text-[#cfcfcf] font-medium leading-tight text-shadow-sm">El reto estándar equilibrado.</p>
+                    </div>
+                </button>
+
+                <!-- Difícil -->
+                <button class="diff-btn group flex items-center p-5 rounded-md" data-dificultad="dificil">
+                    <div class="w-20 flex justify-center text-[#d2c299]">
+                        <span class="material-symbols-outlined text-6xl drop-shadow-[2px_3px_2px_rgba(0,0,0,0.7)]">bolt</span>
+                    </div>
+                    <div class="flex-1 text-left ml-4">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-headline font-black text-3xl text-[#c43b3b] drop-shadow-[2px_3px_2px_rgba(0,0,0,0.8)]" style="-webkit-text-stroke: 1px #111;">Difícil</span>
+                            <span class="bg-[#3a1515] text-[#d67b7b] text-xs px-2.5 py-1 rounded shadow-inner font-black tracking-widest border border-[#1a0a0a]">EXPERTO</span>
+                        </div>
+                        <p class="font-mono text-sm text-[#cfcfcf] font-medium leading-tight text-shadow-sm">Insectos veloces y tiempo limitado.</p>
+                    </div>
+                </button>
+            </div>
+
+            <div class="flex flex-col gap-4 mt-8 w-full relative z-10 px-6">
+                <button id="btn-comenzar-caza" class="w-full flex items-center justify-center py-4 rounded bg-[#bda15b] border-b-[6px] border-[#7a6435] border-t border-[#d8c382] text-black hover:brightness-110 active:border-b-0 active:translate-y-[6px] transition-all shadow-[0_6px_15px_rgba(0,0,0,0.6)] old-btn-texture">
+                    <span class="font-headline font-black text-2xl md:text-3xl tracking-widest relative z-10" style="color: #1a120b; text-shadow: 1px 1px 0px rgba(255,255,255,0.4);">COMENZAR CAZA</span>
+                </button>
+
+                <button id="btn-regresar" class="w-full flex items-center justify-center py-3 rounded bg-[#33281d] border-b-[5px] border-[#1a140f] border-t border-[#524434] text-[#d4c5b4] hover:text-white hover:brightness-110 active:border-b-0 active:translate-y-[5px] transition-all shadow-[0_6px_15px_rgba(0,0,0,0.6)] old-btn-texture-dark">
+                    <span class="font-headline font-bold text-xl md:text-2xl tracking-widest relative z-10" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">REGRESAR</span>
+                </button>
+            </div>
+            
+            <footer class="mt-8 pt-4 border-t-2 border-[#5a4b31]/40 text-center text-[10px] md:text-xs font-mono uppercase tracking-[0.2em] text-[#2b1f14] font-bold w-full relative z-10 mix-blend-color-burn">
+                COLECCIÓN REAL DE ENTOMOLOGÍA — PROTOCOLO 1894
+            </footer>
+        </div>
+
+        <!-- Juego principal -->
+        <section id="juego-principal" class="hidden absolute inset-0 z-20 p-4 md:p-6">
+            <header class="absolute top-8 left-8 right-8 z-30 flex items-start justify-between">
+                <div class="game-hud-card px-4 py-3 rounded-lg min-w-[160px]">
+                    <p class="text-[10px] uppercase tracking-[0.35em] text-white/80 font-bold">Puntuación</p>
+                    <p id="score-value" class="font-headline text-4xl leading-none text-[#f2d58d]">0</p>
+                </div>
+                <div class="game-hud-card px-4 py-3 rounded-lg min-w-[140px] text-right">
+                    <p class="text-[10px] uppercase tracking-[0.35em] text-white/80 font-bold">Tiempo</p>
+                    <p id="timer-value" class="font-headline text-4xl leading-none text-[#f8c2b7]">00:00</p>
+                </div>
+            </header>
+            <div class="absolute bottom-8 left-8 z-30">
+                <button id="btn-terminar-partida"
+                    class="group relative flex items-center justify-between py-3 px-8 grimy-tape bg-red-950/20 hover:text-tertiary-dim/60 transition-all text-tertiary-dim/70 hover:text-tertiary-dim [text-shadow:_0_0_8px_rgba(139,0,0,0.4)]">
+                    <span class="font-headline font-bold text-base uppercase tracking-[0.2em] relative z-10 italic">
+                        TERMINAR PARTIDA
+                    </span>
+                    <span class="material-symbols-outlined text-black/20 relative z-10 text-lg ml-3">stop_circle</span>
+                </button>
+            </div>
+
+            <div id="game-board" class="absolute inset-0 overflow-hidden"></div>
+        </section>
+
+        <section id="menu-victoria" class="hidden absolute inset-0 z-30 flex items-center justify-center px-6">
+            <article
+                class="relative w-full max-w-[650px] px-12 py-16 old-paper-menu flex flex-col items-center gap-8 animate-flicker">
+                <div class="absolute inset-0 blood-splatter opacity-25 pointer-events-none"></div>
+                <div class="absolute top-10 right-10 w-24 h-24 bg-red-900/40 rounded-full mix-blend-multiply blur-xl pointer-events-none"></div>
+                <div class="absolute bottom-20 left-10 w-32 h-32 bg-black/40 rounded-full mix-blend-multiply blur-2xl pointer-events-none"></div>
+
+                <h3 class="font-headline font-black text-6xl md:text-7xl tracking-wide relative z-10"
+                    style="color: #c9ca1f; -webkit-text-stroke: 2px #2b1f14; text-shadow: 3px 6px 8px rgba(0,0,0,0.8);">
+                    ¡Misión Cumplida!
+                </h3>
+                <p class="font-mono text-center text-[#1a120b] font-bold text-base md:text-lg px-4 relative z-10 mix-blend-color-burn">
+                    Has limpiado la mesa de especímenes.
+                </p>
+
+                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
+                    <div class="diff-btn p-4 rounded-md text-center">
+                        <p class="text-xs tracking-[0.25em] uppercase font-black text-[#d2c299]">Especies</p>
+                        <p id="victory-killed" class="font-headline font-black text-4xl text-[#dfdfdf] mt-2">0</p>
+                    </div>
+                    <div class="diff-btn p-4 rounded-md text-center">
+                        <p class="text-xs tracking-[0.25em] uppercase font-black text-[#d2c299]">Precisión</p>
+                        <p id="victory-precision" class="font-headline font-black text-4xl text-[#c9ca1f] mt-2">0%</p>
+                    </div>
+                    <div class="diff-btn p-4 rounded-md text-center">
+                        <p class="text-xs tracking-[0.25em] uppercase font-black text-[#d2c299]">Clicks Fallidos</p>
+                        <p id="victory-missed" class="font-headline font-black text-4xl text-[#c43b3b] mt-2">0</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4 mt-4 w-full relative z-10 px-6">
+                    <button id="btn-reiniciar-nivel"
+                        class="w-full flex items-center justify-center gap-2 py-4 rounded bg-[#bda15b] border-b-[6px] border-[#7a6435] border-t border-[#d8c382] text-black hover:brightness-110 active:border-b-0 active:translate-y-[6px] transition-all shadow-[0_6px_15px_rgba(0,0,0,0.6)] old-btn-texture">
+                        <span class="material-symbols-outlined">refresh</span>
+                        <span class="font-headline font-black text-2xl md:text-3xl tracking-widest">REINICIAR NIVEL</span>
+                    </button>
+
+                    <button id="btn-cambiar-dificultad"
+                        class="w-full flex items-center justify-center gap-2 py-3 rounded bg-[#33281d] border-b-[5px] border-[#1a140f] border-t border-[#524434] text-[#d4c5b4] hover:text-white hover:brightness-110 active:border-b-0 active:translate-y-[5px] transition-all shadow-[0_6px_15px_rgba(0,0,0,0.6)] old-btn-texture-dark">
+                        <span class="material-symbols-outlined">tune</span>
+                        <span class="font-headline font-bold text-xl md:text-2xl tracking-widest">CAMBIAR DIFICULTAD</span>
+                    </button>
+                </div>
+
+                <footer
+                    class="mt-4 pt-4 border-t-2 border-[#5a4b31]/40 text-center text-[10px] md:text-xs font-mono uppercase tracking-[0.2em] text-[#2b1f14] font-bold w-full relative z-10 mix-blend-color-burn">
+                    RESULTADO DE CAZA — THE WORKBENCH PROTOCOL
+                </footer>
+            </article>
+        </section>
+
+        <section id="menu-historial" class="hidden absolute inset-0 z-30 flex items-center justify-center px-6">
+            <article
+                class="relative w-full max-w-[880px] px-10 py-12 old-paper-menu flex flex-col items-center gap-8 animate-flicker">
+                <div class="absolute inset-0 blood-splatter opacity-20 pointer-events-none"></div>
+
+                <h3 class="font-headline font-black text-5xl md:text-6xl tracking-wide relative z-10"
+                    style="color: #c9ca1f; -webkit-text-stroke: 2px #2b1f14; text-shadow: 3px 6px 8px rgba(0,0,0,0.8);">
+                    Historial Asesino
+                </h3>
+
+                <div class="w-full relative z-10 grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+                    <div class="diff-btn rounded-md p-4">
+                        <p class="text-xs tracking-[0.2em] uppercase font-black text-[#d2c299] mb-2">Filtro dificultad</p>
+                        <select id="historial-filtro-dificultad"
+                            class="w-full bg-[#261a11]/70 text-[#e2cfa9] font-bold px-3 py-2 rounded outline-none">
+                            <option value="all">Todas</option>
+                            <option value="facil">Fácil</option>
+                            <option value="normal">Normal</option>
+                            <option value="dificil">Difícil</option>
+                        </select>
+                    </div>
+                    <div class="diff-btn rounded-md p-4">
+                        <p class="text-xs tracking-[0.2em] uppercase font-black text-[#d2c299] mb-2">Mini ranking (Top 5)</p>
+                        <ol id="historial-ranking" class="text-[#f1e5cf] font-bold text-sm space-y-1">
+                            <li>Sin datos.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="w-full relative z-10 historial-table-wrap">
+                    <table class="w-full historial-table">
+                        <thead>
+                            <tr>
+                                <th>Fecha/Hora</th>
+                                <th>Dificultad</th>
+                                <th>Puntuación</th>
+                                <th>Fallidos</th>
+                                <th>Precisión</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historial-body">
+                            <tr>
+                                <td colspan="5">Sin partidas registradas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="w-full flex justify-center relative z-10">
+                    <button id="btn-historial-regresar"
+                        class="w-full max-w-[380px] flex items-center justify-center gap-2 py-3 rounded bg-[#33281d] border-b-[5px] border-[#1a140f] border-t border-[#524434] text-[#d4c5b4] hover:text-white hover:brightness-110 active:border-b-0 active:translate-y-[5px] transition-all shadow-[0_6px_15px_rgba(0,0,0,0.6)] old-btn-texture-dark">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        <span class="font-headline font-bold text-xl md:text-2xl tracking-widest">REGRESAR</span>
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- Atmospheric Controls -->
+    <div
+        class="fixed bottom-6 right-6 z-[100] flex items-center gap-4 bg-black/60 backdrop-blur-sm px-4 py-2 border border-white/5 scale-90">
+        <span class="text-[8px] font-label text-white/10 font-bold uppercase tracking-[0.4em]">Atmosphere</span>
+        <button id="btn-soundtrack-toggle" type="button"
+            class="w-12 h-12 flex items-center justify-center hover:bg-white/5 transition-all border-2 border-white/20 outline outline-1 outline-white/10 shadow-[0_0_0_3px_rgba(0,0,0,0.35)]"
+            aria-label="Activar o desactivar soundtrack">
+            <span id="soundtrack-icon" class="material-symbols-outlined text-[22px] text-white/60">volume_up</span>
+        </button>
+    </div>
+
+    <aside id="resumen-partida"
+        class="fixed bottom-6 left-6 z-[100] hidden max-w-[280px] rounded-lg bg-[#120807]/95 px-4 py-3 text-[#efd9b6] shadow-[0_10px_24px_rgba(0,0,0,0.7)]">
+        <p class="text-[10px] uppercase tracking-[0.35em] text-[#d0b08a] font-bold">Último Registro</p>
+        <p class="text-sm mt-2">Insectos: <span id="resumen-killed" class="font-bold">0</span></p>
+        <p class="text-sm">Precisión: <span id="resumen-precision" class="font-bold">0%</span></p>
+        <p class="text-sm">Fallidos: <span id="resumen-missed" class="font-bold">0</span></p>
+        <p class="text-sm">Tiempo usado: <span id="resumen-time" class="font-bold">00:00</span></p>
+    </aside>
+    
+    <script type="module" src="./assets/js/app.js"></script>
+</body>
+
+</html>

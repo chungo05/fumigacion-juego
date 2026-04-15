@@ -1,0 +1,252 @@
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#000000",
+                        "surface-container-highest": "#1a0f0d",
+                        "on-surface-variant": "#8a6d68",
+                        "primary": "#d14b3b",
+                        "error-container": "#4a0404",
+                        "secondary-container": "#1e3a1a",
+                        "on-primary": "#2d0a06",
+                        "on-primary-fixed": "#2d0a06",
+                        "surface-tint": "#d14b3b",
+                        "primary-container": "#5a2d27",
+                        "inverse-surface": "#fff8f6",
+                        "surface-container-high": "#150a08",
+                        "on-tertiary": "#2a0001",
+                        "on-secondary-fixed": "#0a2d0d",
+                        "secondary-dim": "#4e8c4d",
+                        "on-tertiary-fixed": "#2a0001",
+                        "tertiary": "#8b0000",
+                        "tertiary-fixed": "#ff9288",
+                        "secondary": "#5da65c",
+                        "on-surface": "#a3807a",
+                        "on-secondary-fixed-variant": "#1a3a1e",
+                        "tertiary-fixed-dim": "#ff7b70",
+                        "tertiary-container": "#5a0001",
+                        "surface-bright": "#22110e",
+                        "secondary-fixed": "#5da65c",
+                        "on-primary-container": "#ffdad4",
+                        "primary-fixed": "#ffdad4",
+                        "on-tertiary-fixed-variant": "#600004",
+                        "on-primary-fixed-variant": "#8a332a",
+                        "inverse-primary": "#9c2a1e",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "outline-variant": "#3a2522",
+                        "surface-container-lowest": "#050201",
+                        "outline": "#6d4e4a",
+                        "inverse-on-surface": "#321d1b",
+                        "on-secondary": "#0a2d0d",
+                        "surface-container-low": "#0d0605",
+                        "surface": "#050201",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#ffdad9",
+                        "error": "#ffb4ab",
+                        "tertiary-dim": "#8b0000",
+                        "background": "#050201",
+                        "primary-dim": "#ffb4aa",
+                        "surface-container": "#120807",
+                        "on-secondary-container": "#bdf1bb",
+                        "surface-variant": "#1a0f0d",
+                        "error-dim": "#ffb4ab",
+                        "secondary-fixed-dim": "#4e8c4d",
+                        "on-background": "#a3807a",
+                        "surface-dim": "#050201"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0.125rem",
+                        "xl": "0.25rem",
+                        "full": "0.5rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    "animation": {
+                        "flicker": "flicker 4s linear infinite",
+                        "flicker-light": "flicker-light 8s infinite",
+                        "twitch": "twitch 0.5s ease-in-out infinite alternate",
+                        "float": "float 6s ease-in-out infinite"
+                    },
+                    "keyframes": {
+                        "flicker": {
+                            "0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%": { opacity: "1", filter: "brightness(100%)" },
+                            "20%, 21.999%, 63%, 63.999%, 65%, 69.999%": { opacity: "0.85", filter: "brightness(90%)" }
+                        },
+                        "flicker-light": {
+                             "0%, 100%": { opacity: "0.4" },
+                             "5%, 7%": { opacity: "0.2" },
+                             "6%": { opacity: "0.5" },
+                             "30%, 32%": { opacity: "0.35" },
+                             "31%": { opacity: "0.1" },
+                             "70%, 72%": { opacity: "0.45" },
+                             "71%": { opacity: "0.2" }
+                        },
+                        "twitch": {
+                            "0%": { transform: "translate(0, 0) rotate(0deg)" },
+                            "10%": { transform: "translate(-1px, -1px) rotate(-0.5deg)" },
+                            "20%": { transform: "translate(1px, 0px) rotate(0.5deg)" },
+                            "100%": { transform: "translate(0, 0) rotate(0deg)" }
+                        },
+                        "float": {
+                            "0%, 100%": { transform: "translateY(0)" },
+                            "50%": { transform: "translateY(-10px)" }
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+.vignette-overlay {
+    background: radial-gradient(circle at 50% 40%, transparent 0%, rgba(0, 0, 0, 0.98) 85%)
+    }
+.grain-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCzRUUGDWFaVVE2R5-iauPRpp8eT2Bd_gYRVXAuqKQZyQb8O7q4EkHlXFZ8VDWVmblNufpw_Rk_PjU_ur0wKAM1jsYyNn2OJozGWNPSQ1dQusqdjEMZx-yrUAJzOosd5TDvvkWiWSX_dCPlpXPPXZmt06cNO4sv8Dy8ZlToobnrNM1goQrDpMN2j3LgYP_1BAkN04Z6_Hv2iDnGQIQJzUCpGe150b4YFVkmCsDR6bvYZ0fm66uC3qKWX-ophIAN_C31jhjh6SW5vjY);
+    opacity: 0.2;
+    mix-blend-mode: overlay
+    }
+.decaying-title {
+    color: #4b2c20;
+    text-shadow: 0 0 15px rgba(209, 75, 59, 0.4), 0 10px 20px rgba(0,0,0,0.9);
+    background: linear-gradient(180deg, #ff6b5b 0%, #3d2119 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: url(#decay-filter) brightness(1.2) contrast(1.1);
+    letter-spacing: -0.08em;
+}
+.blood-splatter {
+    background-image: radial-gradient(circle, rgba(70, 0, 0, 0.5) 0%, transparent 70%);
+    filter: blur(12px);
+    mix-blend-mode: multiply;
+}
+.slimy-texture {
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBaVrnNIyHFzqp-haMrEFnRA1kYeOHSzL0DEZ1o1xCbn8SO9FDF3jDIc3ZuwZssTfK5UfPn2YbFICDD5SJFE72V4sT7AghjM5N6gbiChl8jbiRIzAq1c-iME8uz_g6Z5DUwK-OXIUIqgTJAKBBPr6cG7f1ITPdK4QKZYowgv6FG6jduol2ClSU7S_Av_ymC9F7nj17-4sQMwaD2Vp_qhMMCSRUvCQ6PpBxKf5nVb59EivKegw7J_nUsK3iEscm4G-UtL2Qko5lHCs8');
+    opacity: 0.4;
+    mix-blend-mode: color-burn;
+}
+.rusted-metal {
+    background-color: #1a0f0d;
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByiMEDsXz_xGpoTlUprlrGDm5AHu5rw55bHDvOTq16aHNkL4V_6Bb6FzTFV3ZVh4GzIfIyse8J2Y-QWUwuuBWN8RYou_eE4BnesEtMrI7_WmomdWQd5xrQ-6WsqAJV-6pbssofYxb7Ai5pZ1ZkJz0eZEcQ1i4hXC2ulbBFfOX5l08fWVPwW9mRxsRP7Z08pS8Z38Rnqy0yKDquBX96W76maqGBtMLCt6AiYl3Q1yueEi5xOKhfWJFybG_1B2zupVjjjGVc7VQucGg');
+    background-blend-mode: luminosity;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.8), inset 0 1px 2px rgba(255,255,255,0.1);
+    border: 1px solid #4a2c24;
+}
+.grimy-tape {
+    background-color: #3d3b30;
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCX3UxXo9Q5loRowzeLtvmVOtNwXRy0Vuah-ilbAHN9SLXNTypPg4dJYUjWVzzQPRFv01XyjFtpR58GOL4-kiwaMOJCOeaTPsXrV5SRjjb1XWjp8ohD8gSLw6agq_zVgHXafu0qOlzg3ZkfmULlQllH7Yu3oBrYNH3YrbJKZvgOrrSqLRclmYGfMv9UA05iC3ffK9PoPMJ9x0wW0CNwQFK2tKkvy2U0o9nQvnN_xidqPBtKSTbJKqMeeA3owCz2zVLvc5lCt5Hi7yA');
+    opacity: 0.95;
+    transform: rotate(-0.5deg);
+    border-radius: 1px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.1);
+}
+.oil-slick {
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.95) 0%, transparent 80%);
+    filter: blur(25px);
+    mix-blend-mode: darken;
+}
+.overhead-light {
+    background: radial-gradient(circle at 50% 0%, rgba(255, 230, 200, 0.15) 0%, transparent 60%);
+    mix-blend-mode: screen;
+}
+</style>
+</head>
+<body class="bg-black font-body text-on-surface/40 overflow-hidden min-h-screen selection:bg-tertiary selection:text-white">
+<svg style="display:none">
+<filter id="decay-filter">
+<feturbulence basefrequency="0.15" numoctaves="5" stitchtiles="stitch" type="fractalNoise"></feturbulence>
+<fedisplacementmap in="SourceGraphic" scale="8"></fedisplacementmap>
+<fegaussianblur stddeviation="0.5"></fegaussianblur>
+</filter>
+</svg>
+<!-- Global Flickering Overlay -->
+<div class="fixed inset-0 z-[100] pointer-events-none animate-flicker-light bg-primary/5"></div>
+<!-- The Macro Workbench: Main Menu Canvas -->
+<main class="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center grayscale-[0.4] brightness-[0.4]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqfHLviWJbIpA7iGHPnT6mvQRVx5dM4va83Jh2Y8nVFleFhBgPoXPnUGJvStP3K8jcJhuBTfK5JFV1iC0bpNmyOf-KfIeD2GxniV6TX4Vgo1CsES__rhCNn8_QMsSwV8viZdjNqY0PpbKaTeS1BsMurSM9tZ1Rl6GP_q0vqjdYPeNDCOC6PHQ8lWR0XKHF3wYSEub8Nic8UjdMLwtrNKEfLT5-1J7DsThmO5FkB583nihRVfxZ5RRLJquj61deGLBEy708juWHZFk');">
+<!-- Atmospheric Overlays -->
+<div class="absolute inset-0 vignette-overlay pointer-events-none z-50"></div>
+<div class="absolute inset-0 overhead-light pointer-events-none z-40"></div>
+<div class="absolute inset-0 grain-texture pointer-events-none z-40"></div>
+<!-- Organic Stains -->
+<div class="absolute top-1/3 left-1/4 w-96 h-96 oil-slick opacity-100"></div>
+<div class="absolute bottom-20 right-1/4 w-80 h-80 blood-splatter opacity-80"></div>
+<!-- Crawling Specimens (Integrated into shadows) -->
+<div class="absolute top-[12%] left-[18%] w-32 h-32 opacity-20 rotate-12 filter blur-[2px] brightness-[0.1] contrast-150 animate-twitch">
+<img alt="centipede" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVBXvl-QCGMGsR63m45E6cINVB-mmpi_HYPco-7vchCkrJaEauVjB_Cvrs6nMdEih7QDDnIvvpmlWNniwOVvv7g2-XeI1vep_8vRaiErYaiMigIqfrlTZ7dmAGEuvvob12vGfr3ngtxIyu5QdoO7gEGDaNlpJ5uf1q3at_hJoJ6biBxY4njI5hHjQmzr4nWAiIzI0j9BbgR-3Rnm7lKUAjY-uht52ExeK3ALNiTU-s4JnI96WQK_ltmhQIxGgmRgzF4EbhcpXsJdc"/>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 flex flex-col items-center gap-12 w-full max-w-lg px-6 animate-flicker">
+<!-- Logo / Title Section -->
+<header class="text-center relative">
+<h1 class="font-headline font-black italic uppercase text-8xl md:text-9xl decaying-title leading-none relative">
+                    INFESTACIÓN
+                    <!-- Slime overlay -->
+<div class="absolute inset-0 slimy-texture pointer-events-none"></div>
+</h1>
+<p class="mt-4 font-label text-[10px] uppercase tracking-[0.6em] text-primary/20 font-bold">
+                    Biological Containment Breach
+                </p>
+</header>
+<!-- Main Menu Card -->
+<section class="w-full flex flex-col gap-6 relative">
+<!-- Action Buttons -->
+<nav class="flex flex-col gap-5 relative z-20">
+<!-- Start Experiment -->
+<button class="group relative flex items-center justify-center py-6 px-6 rusted-metal text-on-surface/40 hover:text-primary/60 transition-all duration-500">
+<span class="font-headline font-black text-2xl uppercase tracking-tighter relative z-10 opacity-70 group-hover:opacity-100 transition-opacity !opacity-90 [text-shadow:_0_0_10px_rgba(209,75,59,0.3)]">COMENZAR EXPERIMENTO</span>
+<span class="material-symbols-outlined absolute right-6 text-2xl text-black/60 group-hover:text-primary/20 transition-all">pest_control_rodent</span>
+</button>
+<!-- Settings -->
+<button class="group relative flex items-center justify-between py-4 px-10 grimy-tape hover:text-black/80 transition-all text-black/80 hover:text-black">
+<div class="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBVnWYvn0uyDcI5wAWEw57cduL6OCujRQ_YM5J1z_DDSP4VduKfOue0ZxEA70t3p-Q0mjBU0QLaX4j5xSXNxROgCPD54NT7Vnfv30W2qW5P0N26u2DwzuAFY6lFrLLh1-tW4j_sv7rvV-IRNrru2SBsTt29EtoDqpEjetkjrNDlkKLe8OL7T8E9YtZUAsB0Y_iqcwJ_Pcy8hkCDflC_3wycPt66qVQgH5qYW9-urkEMP1qX5H4ahpkG2tdq0r8hBLHCp4HLoltHGg');"></div>
+<span class="font-headline font-bold text-lg uppercase tracking-[0.2em] relative z-10 italic">CONFIGURACIÓN</span>
+<span class="material-symbols-outlined text-black/20 relative z-10 text-xl">settings</span>
+</button>
+<!-- Exit -->
+<button class="group relative flex items-center justify-between py-4 px-10 grimy-tape bg-red-950/20 hover:text-tertiary-dim/60 transition-all text-tertiary-dim/70 hover:text-tertiary-dim [text-shadow:_0_0_8px_rgba(139,0,0,0.4)]">
+<span class="font-headline font-bold text-lg uppercase tracking-[0.2em] relative z-10 italic">SALIR</span>
+<span class="material-symbols-outlined text-black/20 relative z-10 text-xl">close</span>
+</button>
+</nav>
+<!-- Footer Stats -->
+<footer class="mt-8 pt-6 border-t border-white/5 flex justify-between items-center text-[8px] font-label uppercase tracking-widest text-outline/20">
+<div class="flex items-center gap-2">
+<span class="w-1 h-1 rounded-full bg-secondary-dim/40 shadow-[0_0_8px_rgba(78,140,77,0.3)] animate-pulse"></span>
+                        BIO-HAZARD: CRITICAL
+                    </div>
+<div class="opacity-10 italic">SYSTEM.NULL_PTR.08</div>
+</footer>
+</section>
+<!-- Subtle Specimen Icons -->
+<div class="flex gap-10 items-center justify-center opacity-5 hover:opacity-10 transition-opacity duration-1000 grayscale">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary/40 text-2xl" data-weight="fill">bug_report</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary/40 text-2xl" data-weight="fill">biotech</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary/40 text-2xl" data-weight="fill">pest_control</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Atmospheric Controls -->
+<div class="fixed bottom-6 right-6 z-[100] flex items-center gap-4 bg-black/60 backdrop-blur-sm px-4 py-2 border border-white/5 scale-90">
+<span class="text-[8px] font-label text-white/10 font-bold uppercase tracking-[0.4em]">Atmosphere</span>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-base text-white/20">volume_up</span>
+</button>
+</div>
+</body></html>
